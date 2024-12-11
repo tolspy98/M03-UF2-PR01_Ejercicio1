@@ -30,8 +30,8 @@ public class Perfil {
         return formatArray("Comidas favoritas", foods);
     }
 
-    public String getFormattedFunFacts() {
-        return formatArray("Datos curiosos", funFacts);
+    public String[] getFunFacts() {
+        return funFacts;
     }
 
     private String formatArray(String title, String[] items) {
@@ -40,14 +40,6 @@ public class Perfil {
             formatted.append("- ").append(item).append("\n");
         }
         return formatted.toString();
-    }
-
-    public String getProfileInfo() {
-        return "Nombre: " + name + "\n" +
-                "Historia: " + story + "\n\n" +
-                getFormattedHobbies() + "\n" +
-                getFormattedFoods() + "\n" +
-                getFormattedFunFacts();
     }
 
 }
